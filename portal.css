@@ -1,0 +1,297 @@
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  background: 0;
+}
+
+
+body {
+  font-family: 'Pirata One';
+  font-size: 15px; 
+  margin: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; 
+  background: #000;
+  text-align: center;
+  background-image: url('pirate_map.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: auto;
+  color: rgb(250, 246, 246);
+}
+
+
+.main {
+  position: relative;
+  background-image: url('frame_bg.png'); 
+  width: auto;
+  max-width: 325px; 
+  height: auto;
+  max-height: 980px; 
+  padding: 5px;
+  gap: 4px;
+  margin-top:10%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+  text-align: center;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+
+span#status {
+  /*box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px 0, rgba(0, 0, 0, 0.15) 0 2px 6px 2px;*/
+  color: #dc3545;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 1px 3px;
+ /* border-radius: 50px;*/
+ -webkit-text-fill-color: #000; /* Will override color (regardless of order) */
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color:#fff;
+}
+
+.time-wrapper {
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px;
+  font-weight: bolder;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  color: #060000;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 2;
+  background: 0;
+}
+.time-wrapper .inner-wrapper {
+  width: 80%;
+  float: left;
+  padding: 1px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.time-wrapper .inner-wrapper div:first-child {
+  font-size: 40px;
+  color: #413434;
+  font-weight: bolder;
+  position: relative;
+}
+.time-wrapper .inner-wrapper div:last-child {
+  font-size: 10px;
+  color: #2e2626;
+  opacity: 80%;
+  text-transform: uppercase;
+}
+.align-content-stretch {
+  -ms-flex-line-pack: stretch !important;
+  align-content: stretch !important;
+}
+.flex-wrap {
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 0px;
+}
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.flex-fill {
+  -ms-flex: 1 1 auto !important;
+  flex: 1 1 auto !important;
+}
+
+/* Button Styles */
+.actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Center the buttons vertically */
+  align-items: center; /* Center the buttons horizontally */
+  gap: 0px; /* Add space between buttons */
+  margin-top: 10px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center;
+  align-items: center; /* Center the content horizontally */
+  text-align: center;
+}
+
+.actions button img {
+  width: 90%; /* Adjust width to be responsive (relative to parent container) */
+  max-width: 400px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+  
+}
+
+.actions button img:hover {
+  transform: scale(1.05); /* Increase hover scale effect */
+}
+
+
+/* Media Queries for Very Small Screens */
+@media screen and (max-width: 480px) {
+  .actions button img {
+    width: 100%; /* Take full width for very small screens */
+    max-width: 280px; /* Further decrease max width */
+    height: 45px; /* Adjust height to be consistent */
+  }
+}
+
+/* Image container */
+.image-container {
+  position: absolute;
+  left: 50%; /* Center the image horizontally */
+  top: 50%; /* Center the image vertically */
+  transform: translate(-50%, -50%); /* Adjust image to center correctly */
+  z-index: -1; /* Make sure it's behind the input field */
+}
+
+.image-container img {
+  width: 100px; /* Make the image smaller */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Code Row Styles */
+.codeRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative; /* Allow absolute positioning of the image inside it */
+}
+
+.codeRow input {
+  padding: 5px;
+  font-size: 1.1rem;
+  width: 50%;
+  border: 0px solid #d17f00;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: url('sinage2-Photoroom.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: normal;
+
+}
+
+/* Pirate-Themed Submit Button */
+.codeRow .submit {
+  padding: 1px 15px;
+  background-color: transparent;
+  color: white;
+  border: 0px solid #d17f00; /* Golden color border to resemble a treasure */
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: 'Pirata One'; /* Pirate-inspired font */
+  background-image: url('sinage2-Photoroom.png'); /* Replace with your wooden background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4); /* Add some depth with shadow */
+  text-align: right;
+  padding: 12px 20px;
+}
+
+.codeRow .submit:before {
+  /* content: "☠️"; Pirate skull icon */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.codeRow .submit:hover { 
+  transform: scale(1.1); /* Slightly increase size on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Darker shadow effect on hover */
+}
+
+
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+  body {
+    width: 90vw; /* Increase body width to fit smaller screens */
+    height: 80vh; /* Maintain portrait height */
+  }
+
+  .banner {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100vw; /* Full width for very small screens */
+    height: 100vh; /* Full height for very small screens */
+  }
+}
+
+/* Pirate Skull Image Styling */
+.pirate-skull {
+  position: absolute; /* Position the skull image absolutely */
+  left: 0px;
+  right:50px; /* Move it to the left side of the container */
+  top: -10%; /* Vertically center it */
+  transform: translate(-50%);
+  width: 130px; /* Make the image smaller (adjust as needed) */
+  height: auto; /* Maintain the aspect ratio */
+  z-index: 100; /* Ensure the skull stays on top */
+}
+
+.pirate-skull img {
+  width: 100%; /* Make the image fit the container's width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Pirate Skull Image Styling */
+.treasure-chest {
+  position: absolute; /* Position the skull image absolutely */
+  left: -20px;
+  right:50px; /* Move it to the left side of the container */
+  top: 75%; /* Vertically center it */
+  transform: translate(-50%);
+  width: 140px; /* Make the image smaller (adjust as needed) */
+  height: auto; /* Maintain the aspect ratio */
+  z-index: 100; /* Ensure the skull stays on top */
+}
+
+.treasure-chest img {
+  width: 100%; /* Make the image fit the container's width */
+  height: auto; /* Maintain aspect ratio */
+}
